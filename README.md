@@ -16,7 +16,7 @@ Continuous Independent variables:
 6. OverseasGross
 7. WorldwideGross
 
-Categorical Independent variables (yes/no):
+Categorical Independent variables (yes/no) (except Movie):
 1. Avengers
 2. IronMan
 3. CaptainAmerica
@@ -31,3 +31,4 @@ Categorical Independent variables (yes/no):
 12. Thanos
 13. CaptainMarvel
 14. DoctorStrange
+15. Movie
