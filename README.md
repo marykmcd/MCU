@@ -4,10 +4,10 @@ Dataset and Regression Analysis of Marvel Cinematic Universe's 21 movies to pred
 Train dataset - MarvelUniverse.csv
 Test (Predict) dataset - AvengersEndgame.csv
 
-Continous Response variable:
+Continuous Response variable:
 DomesticGross
 
-Continous Independent variables:
+Continuous Independent variables:
 1. YearOfRelease
 2. Budget
 3. RunningTime
