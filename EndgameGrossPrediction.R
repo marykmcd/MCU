@@ -1,5 +1,7 @@
-# Please visit by article at Linkedin for detailed explanation.
+# Please refer to my article at Linkedin for detailed explanation.
 # The link to the article is https://www.linkedin.com/pulse/avengers-endgame-surpass-avatar-simple-regression-analysis-kumavat
+
+# ------------- Part 1 - Predict DomesticGross of Avengers: Endgame ---------------------
 
 rm(list = ls())
 
@@ -52,19 +54,19 @@ head(pred)
 
 # I now decide to keep it simple and select only the continious independent variables.
 
-linearmodel2 = lm(DomesticGross ~ YearOfRelease + RunningTime + DomesticScreens +
+linearmodel2 = lm(DomesticGross ~ YearOfRelease + Budget + RunningTime + DomesticScreens +
                      WeekendGross, data = X)
 summary(linearmodel2)
 
 # Well.. "I like this one!" ;)
 
 
-y = subset(data2, select = c(YearOfRelease, RunningTime, DomesticScreens,
+y = subset(data2, select = c(YearOfRelease, Budget, RunningTime, DomesticScreens,
                                 WeekendGross))
 #summary(y)
 
 pred = predict(linearmodel2, y)
-head(pred)
+pred
 
 
 # Predicting Avengers: Infinity war's domestic Gross.
@@ -78,11 +80,17 @@ dim(X_new)
 y_new = X[c(13),]
 y_new
 
-linearmodel_new = lm(DomesticGross ~ YearOfRelease + RunningTime + DomesticScreens +
+y_new = subset(y_new, select = c(YearOfRelease, Budget, RunningTime, DomesticScreens,
+                                 WeekendGross))
+y_new
+
+linearmodel_new = lm(DomesticGross ~ YearOfRelease + Budget + RunningTime + DomesticScreens +
                     WeekendGross, data = X_new)
 summary(linearmodel_new)
 
 
-pred = predict(linearmodel_new, y_new)
-head(pred)
+pred_new = predict(linearmodel_new, y_new)
+pred_new
+
+
 
